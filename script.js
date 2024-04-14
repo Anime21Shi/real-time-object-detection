@@ -33,7 +33,8 @@ function enableCam(event){
         console.log(`Error : ${error}`);
     })
 
-    disableWebCamBtn.classList.remove("removed");
+    let disableFunc =() => disableWebCamBtn.classList.remove("removed");
+    setTimeout(disableFunc, 5000);
 }
 
 disableWebCamBtn.addEventListener("click", disableCam);
@@ -79,7 +80,7 @@ function predictCam(){
             if(prediction.score > 0.66){
                 const p = document.createElement("p");
                 // console.log(prediction);
-                p.innerText = prediction.class + ' (' + Math.round(parseFloat(prediction.score)*100) + '%)';
+                p.innerText = prediction.class + ' ( ' + Math.round(parseFloat(prediction.score)*100) + ' % )';
                 p.style = 'left: ' + prediction.bbox[0] + 'px; top: '
                     + (prediction.bbox[1] - 15) + 'px; width: ' 
                     + (prediction.bbox[2] - 10) + 'px;';

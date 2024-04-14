@@ -1,12 +1,17 @@
 body {
-    font-family: helvetica, arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 2em;
-    color: #3D3D3D;
+    color: #425066;
 }
   
 h1 {
-    font-style: bold;
+    font-size: 40px;
     color: #ff9a00;
+    font-style: italic;
+}
+
+h2+p {
+    font-weight: 500;
 }
   
 /* video {
@@ -53,9 +58,16 @@ section {
     position: absolute;
 }
 
-#webcamButton{
+.button-style{
     cursor: pointer;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    margin: 0 1rem;
+    color: white;
+    background: linear-gradient(to right, #ff6f00, #ffa600);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
 }
-#disableCamButton{
-    cursor: pointer;
-}
+

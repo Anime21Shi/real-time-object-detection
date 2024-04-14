@@ -8,10 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
     <!-- Load the coco-ssd model to use to recognize things in images -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><i>Object detection using TensorFlow JS</i></h1>
+    <h1>Object detection using TensorFlow JS</h1>
 
     <h2>How to use</h2>
     <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become
@@ -22,8 +26,12 @@
         <p>Hold some objects up close to your webcam to get a real-time classification! When ready, click "enable webcam"
             below and accept access to the webcam when the browser asks (check the top left of your window)</p>
 
-        <button id="webcamButton">Enable Webcam</button>
-        <button id="disableCamButton" class="removed">Disable Webcam</button>
+        <button id="webcamButton" class="button-style">Enable Webcam&nbsp;
+            <i class="fa-solid fa-video fa-lg"></i>
+        </button>
+        <button id="disableCamButton" class="removed button-style">Disable Webcam&nbsp;
+            <i class="fa-solid fa-video-slash fa-lg"></i>
+        </button>
         <div id="liveView" class="camView">
             <video id="webcam" autoplay width="640" height="480"></video>
         </div>
